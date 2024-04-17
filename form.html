@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation</title>
+</head>
+<body>
+
+<h2>Form Validation Example</h2>
+
+<form id="myForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name"><br><br>
+  
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="email"><br><br>
+  
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+document.getElementById("myForm").addEventListener("submit", function(event) {
+  // Prevent form submission
+  event.preventDefault();
+  
+  // Get form values
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  
+  // Regular expression for email validation
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+  // Validation
+  if (name.trim() === "") {
+    alert("Please enter your name");
+    return;
+  }
+  
+  if (!emailPattern.test(email)) {
+    alert("Please enter a valid email address");
+    return;
+  }
+  
+  // If validation passes, submit the form (here we're just logging a success message)
+  console.log("Form submitted successfully!");
+});
+</script>
+
+</body>
+</html>

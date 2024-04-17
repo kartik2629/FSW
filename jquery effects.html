@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Effects</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      margin: 20px;
+      float: left;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>jQuery Effects Examples</h2>
+
+  <button id="btnFadeIn">Fade In</button>
+  <button id="btnFadeOut">Fade Out</button>
+  <button id="btnSlideDown">Slide Down</button>
+  <button id="btnSlideUp">Slide Up</button>
+  <button id="btnToggle">Toggle</button>
+
+  <div class="box"></div>
+
+  <script>
+    $(document).ready(function () {
+      $("#btnFadeIn").click(function () {
+        $(".box").fadeIn();
+      });
+      $("#btnFadeOut").click(function () {
+        $(".box").fadeOut();
+      });
+      $("#btnSlideDown").click(function () {
+        $(".box").slideDown();
+      });
+      $("#btnSlideUp").click(function () {
+        $(".box").slideUp();
+      });
+      $("#btnToggle").click(function () {
+        $(".box").toggle();
+      });
+    });
+  </script>
+
+</body>
+
+</html>

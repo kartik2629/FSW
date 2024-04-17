@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Events</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 20px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>jQuery Events Examples</h2>
+
+    <div class="box" id="box1">Click Me</div>
+    <div class="box" id="box2">Hover Me</div>
+    <div class="box" id="box3">Double Click Me</div>
+
+    <script>
+        $(document).ready(function () {
+            $("#box1").click(function () {
+                alert("Box 1 clicked!");
+            });
+            $("#box2").hover(function () {
+                $(this).css("background-color", "red");
+            }, function () {
+                $(this).css("background-color", "blue");
+            });
+            $("#box3").dblclick(function () {
+                $(this).css("background-color", "green");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
